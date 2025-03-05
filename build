@@ -1,4 +1,4 @@
 #!/usr/bin/fish
 
-ghdl -a *.vhd && ghdl -e testbench && ./testbench
+ghdl -a {**,}/*.vhd && ghdl -e testbench && ./testbench
 rm *.o
