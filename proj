@@ -16,6 +16,7 @@ case -r
     end
 case -s
     set msg $argv[2]
+    echo $msg
     git add ./{,**}/*
     and git commit -m $msg
     and git push origin master
