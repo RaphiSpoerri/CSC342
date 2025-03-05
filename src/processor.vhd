@@ -46,7 +46,7 @@ package processor is
 	component flipflop1 is
 		port(
 			clk, d: in std_logic;
-			q: inout std_logic
+			q, qnot: inout std_logic
 		);
 	end component;
 
