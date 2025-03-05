@@ -1,21 +1,14 @@
 
-
-
-library IEEE;
+library ieee;
 library work;
-use IEEE.std_logic_1164.all;
-
+use ieee.std_logic_1164.all;
 use work.processor.all;
 
-
 entity testbench is
--- empty
 end testbench;
-
 architecture tb of testbench is
 	signal l, r, sum: std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
 	signal cout: std_logic;
-
 begin
   DUT: adder32 port map(l, r, '1', '1', cout, sum);
 
@@ -25,7 +18,7 @@ begin
 	wait for 200 ns;
 	report to_string(sum);
 
-    assert false report "Test done." severity note;
-    wait;
+	assert false report "Test done." severity note;
+	wait;
   end process;
 end tb;

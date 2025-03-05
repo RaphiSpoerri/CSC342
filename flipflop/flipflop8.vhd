@@ -1,6 +1,8 @@
 
 library ieee;
+library work;
 use ieee.std_logic_1164.all;
+use work.processor.flipflop1;
 
 entity flipflop8 is
 	port(
@@ -11,12 +13,6 @@ entity flipflop8 is
 end flipflop8;
 
 architecture behav of flipflop8 is
-	component flipflop1 is
-		port(
-			clk, d: in std_logic;
-			q: inout std_logic
-		);
-	end component;
 begin
 	ff0: flipflop1 port map(clk, d(7), q(7));
 end architecture;

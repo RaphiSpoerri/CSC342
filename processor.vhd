@@ -36,6 +36,28 @@ package processor is
 		);
 	end component;
 
+	component nor_gate is
+		port(
+			a, b: in std_logic;
+			q: out std_logic
+		);
+	end component;
+
+	component flipflop1 is
+		port(
+			clk, d: in std_logic;
+			q: inout std_logic
+		);
+	end component;
+
+	component flipflop8 is
+		port(
+			clk: in std_logic;
+			d: in std_logic_vector(7 downto 0);
+			q: inout std_logic_vector(7 downto 0)
+		);
+	end component;
+
 	component test_bench is
 	end component;
 
@@ -47,10 +69,10 @@ package body processor is
 		variable b: string (1 to n'length) := (others => NUL);
 		variable stri: integer := 1; 
 	begin
-	    for i in n'range loop
-	        b(stri) := std_logic'image(N((i)))(2);
-	    	stri := stri+1;
-	    end loop;
+		for i in n'range loop
+			b(stri) := std_logic'image(N((i)))(2);
+			stri := stri+1;
+		end loop;
 		return b;
 	end function;
 end package body;

@@ -19,7 +19,9 @@ begin
 end struct;
 
 library ieee;
+library work;
 use ieee.std_logic_1164.all;
+use work.processor.nor_gate;
 
 entity flipflop1 is
 	port(
@@ -29,16 +31,9 @@ entity flipflop1 is
 end flipflop1;
 
 architecture struct of flipflop1 is
-	component nor_gate is
-		port(
-			a, b: in std_logic;
-			q: out std_logic
-		);
-	end component;
 	signal w1: std_logic := '0';
 	signal w2: std_logic := '1';
 	signal qnot: std_logic := '0';
-
 begin
 	nor1: nor_gate port map(w1, q, qnot);
 	nor2: nor_gate port map(w2, qnot, q);
