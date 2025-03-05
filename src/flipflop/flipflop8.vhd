@@ -14,5 +14,6 @@ end flipflop8;
 
 architecture behav of flipflop8 is
 begin
-	ff0: flipflop1 port map(clk, d(7), q(7));
+	ff7: flipflop1 port map(clk, d(7), q(7));
+	ff6: flipflop1 port map(clk, d(6), q(6));
 end architecture;
