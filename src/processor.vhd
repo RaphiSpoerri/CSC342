@@ -61,7 +61,7 @@ package processor is
 	component test_bench is
 	end component;
 
-	function to_string(n: std_logic_vector) return string;	
+	function to_string(n: std_logic_vector) return string;
 end package;
 
 package body processor is
