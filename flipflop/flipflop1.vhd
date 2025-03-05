@@ -5,9 +5,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity nor_gate is
-	port (
+	port(
 		a, b: in std_logic;
-		q: out std_logic;
+		q: out std_logic
 	);
 end nor_gate;
 
@@ -22,15 +22,22 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity flipflop1 is
-	port (
+	port(
 		clk, d: in std_logic;
-		q, qnot: out std_logic;
+		q: inout std_logic
 	);
 end flipflop1;
 
 architecture struct of flipflop1 is
-	signal w1: std_logic = '0';
-	signal w2: std_logic = '1';
+	component nor_gate is
+		port(
+			a, b: in std_logic;
+			q: out std_logic
+		);
+	end component;
+	signal w1: std_logic := '0';
+	signal w2: std_logic := '1';
+	signal qnot: std_logic := '0';
 
 begin
 	nor1: nor_gate port map(w1, q, qnot);
