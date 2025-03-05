@@ -1,5 +1,8 @@
 library ieee;
+library work;
+
 use ieee.std_logic_1164.all;
+use work.processor.adder8;
 
 entity adder32 is
 	port(
@@ -11,14 +14,6 @@ entity adder32 is
 end entity;
 
 architecture behav of adder32 is
-	component adder8 is
-		port(
-			lhs, rhs: in std_logic_vector(7 downto 0);
-			inv, cin: in std_logic;
-			cout: out std_logic;
-			sum: out std_logic_vector(7 downto 0)
-		);
-	end component;
 	signal carry: std_logic_vector(0 to 2);
 begin
 	a0: adder8 port map(lhs(31 downto 24), rhs(31 downto 24), inv, cin,      carry(0), sum(31 downto 24));

@@ -1,5 +1,7 @@
 library ieee;
+library work;
 use ieee.std_logic_1164.all;
+use work.processor.full_adder;
 
 entity adder8 is
 	port(
@@ -11,14 +13,6 @@ entity adder8 is
 end entity;
 
 architecture behav of adder8 is
-	component full_adder is
-		port (
-			lhs, rhs: in std_logic;
-			cin: in std_logic;
-			cout: out std_logic;
-			sum: out std_logic
-		);
-	end component;
 	signal carry: std_logic_vector(6 downto 0);
 	signal inverter: std_logic_vector(7 downto 0);
 begin
