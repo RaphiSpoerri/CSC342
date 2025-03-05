@@ -1,0 +1,3 @@
+#!/usr/bin/fish
+
+ghdl -a *.vhd && ghdl -e testbench && ./testbench
