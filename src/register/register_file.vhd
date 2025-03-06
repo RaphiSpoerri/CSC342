@@ -13,9 +13,9 @@ entity register_file is port (
 ); end entity;
 
 architecture behav of register_file is begin
-	r3: register32 port map(w, d, );
-	r2: register32 port map(w, d, q(23 downto 16));
-	r1: register32 port map(w, d, q(15 downto 8));
-	r0: register32 port map(w, d, q(7 downto 0));
+--	r3: register32 port map(w, d, q1(31 downto 24));
+--	r2: register32 port map(w, d, q1(23 downto 16));
+--	r1: register32 port map(w, d, q1(15 downto 8));
+--	r0: register32 port map(w, d, q1(7 downto 0));
 end architecture;
 
