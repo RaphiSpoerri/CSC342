@@ -53,7 +53,8 @@ package machine is
 
 	component register_file is port (
 		clk, w: in std_logic;
-		sel_d, sel_q1, sel_q0: in std_logic_vector(1 downto 0);
+		sel: in std_logic_vector(1 downto 0);
+		sel_q: in std_logic_vector(3 downto 0);
 		d: in std_logic_vector(31 downto 0);
 		q1: out std_logic_vector(31 downto 0);
 		q0: out std_logic_vector(31 downto 0)
