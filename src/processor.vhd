@@ -2,61 +2,47 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 package processor is
-	component half_adder is
-		port(
-			lhs, rhs: in std_logic;
-			cout, sum: out std_logic
-		);
-	end component;
+	component half_adder is port (
+		lhs, rhs: in std_logic;
+		cout, sum: out std_logic
+	); end component;
 
-	component full_adder is
-		port (
-			lhs, rhs: in std_logic;
-			cin: in std_logic;
-			cout: out std_logic;
-			sum: out std_logic
-		);
-	end component;
+	component full_adder is port (
+		lhs, rhs: in std_logic;
+		cin: in std_logic;
+		cout: out std_logic;
+		sum: out std_logic
+	); end component;
 
-	component adder8 is
-		port(
-			lhs, rhs: in std_logic_vector(7 downto 0);
-			inv, cin: in std_logic;
-			cout: out std_logic;
-			sum: out std_logic_vector(7 downto 0)
-		);
-	end component;
+	component adder8 is port (
+		lhs, rhs: in std_logic_vector(7 downto 0);
+		inv, cin: in std_logic;
+		cout: out std_logic;
+		sum: out std_logic_vector(7 downto 0)
+	); end component;
 
-	component adder32 is
-		port(
-			lhs, rhs: in std_logic_vector(31 downto 0);
-			inv, cin: in std_logic;
-			cout: out std_logic;
-			sum: out std_logic_vector(31 downto 0)
-		);
-	end component;
+	component adder32 is port (
+		lhs, rhs: in std_logic_vector(31 downto 0);
+		inv, cin: in std_logic;
+		cout: out std_logic;
+		sum: out std_logic_vector(31 downto 0)
+	); end component;
 
-	component nor_gate is
-		port(
-			a, b: in std_logic;
-			q: out std_logic
-		);
-	end component;
+	component nor_gate is port (
+		a, b: in std_logic;
+		q: out std_logic
+	); end component;
 
-	component flipflop1 is
-		port(
-			clk, d: in std_logic;
-			q: inout std_logic
-		);
-	end component;
+	component flipflop1 is port (
+		clk, d: in std_logic;
+		q: inout std_logic
+	); end component;
 
-	component flipflop8 is
-		port(
-			clk: in std_logic;
-			d: in std_logic_vector(7 downto 0);
-			q: inout std_logic_vector(7 downto 0)
-		);
-	end component;
+	component flipflop8 is port (
+		clk: in std_logic;
+		d: in std_logic_vector(7 downto 0);
+		q: inout std_logic_vector(7 downto 0)
+	); end component;
 
 	component test_bench is
 	end component;
