@@ -9,12 +9,12 @@ entity mux_4x1 is port (
 ); end entity;
 
 architecture struct of mux_4x1 is begin
-	process(addr, buses) is begin
-		for i in 0 to 31 generate
+	process(addr, bus0, bus1. bus2, bus3) is begin
+		foreach: for i in 0 to 31 loop
 			q(i) <= (addr(0) and addr(1) and bus3(i))
 				or (not addr(0) and addr(1) and bus2(i))
 				or (addr(0) and not addr(1) and bus1(i))
 				or (not addr(0) and not addr(1) and bus0(i));
-		end generate;
+		end loop;
 	end process;
 end architecture;
