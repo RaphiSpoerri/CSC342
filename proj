@@ -2,7 +2,7 @@
 switch $argv[1]
 case -r
     set err (mktemp)
-    if ghdl -a {processor,main}.vhd adder/*.vhd 2>$err && ghdl -e testbench 2>$err
+    if ghdl -a package.vhd adder/*.vhd 2>$err && ghdl -e testbench 2>$err
         ./testbench
         rm testbench *.o *.cf
     else
