@@ -35,19 +35,19 @@ package processor is
 
 	component flipflop1 is port (
 		clk, d: in std_logic;
-		q: inout std_logic
+		q: out std_logic := '0'
 	); end component;
 
 	component flipflop8 is port (
 		clk: in std_logic;
 		d: in std_logic_vector(7 downto 0);
-		q: inout std_logic_vector(7 downto 0)
+		q: out std_logic_vector(7 downto 0)
 	); end component;
 
 	component register32 is port (
 		clk: in std_logic;
 		d: in std_logic_vector(31 downto 0);
-		q: inout std_logic_vector(31 downto 0)
+		q: out std_logic_vector(31 downto 0)
 	); end component;
 
 	component test_bench is

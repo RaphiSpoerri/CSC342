@@ -6,7 +6,7 @@ use work.processor.flipflop1;
 entity flipflop8 is port (
 	clk: in std_logic;
 	d: in std_logic_vector(7 downto 0);
-	q: inout std_logic_vector(7 downto 0)
+	q: out std_logic_vector(7 downto 0)
 ); end entity;
 
 architecture behav of flipflop8 is begin

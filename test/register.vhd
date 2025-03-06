@@ -31,7 +31,23 @@ begin
 		end if;
 		
 		report to_string(q);
+
+		clk <= '1';
+		d <= "00011000000000000000000000000000";
+		wait for 5 ns;
 		
+		report to_string(q);
+		if q /= "00011000000000000000000000000000" then
+			report "Test #3 failed" severity error;
+		end if;
+		clk <= '0';
+		d <= "01000000000000000000000000000000";
+		wait for 5 ns;
+		if q /= "00011000000000000000000000000000" then
+			report "Test #4 failed" severity error;
+		end if;
+		
+		report to_string(q);
 
 		wait;
 	end process;
