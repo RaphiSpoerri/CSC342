@@ -21,7 +21,7 @@ package processor is
 		sum: out std_logic_vector(7 downto 0)
 	); end component;
 
-	component adder32 is port (
+	component alu32 is port (
 		lhs, rhs: in std_logic_vector(31 downto 0);
 		inv, cin: in std_logic;
 		cout: out std_logic;
