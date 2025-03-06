@@ -2,7 +2,7 @@
 library ieee, work;
 
 use ieee.std_logic_1164.all;
-use work.processor.all;
+use work.machine.all;
 
 entity testbench is
 end testbench;
