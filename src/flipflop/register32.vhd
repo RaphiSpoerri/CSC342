@@ -11,8 +11,9 @@ entity flipflop8 is port (
 ); end entity;
 
 architecture behav of flipflop8 is begin
-	ff8_3 flipflop8 port map(clk, d(31 downto 24), q(31 downto 24));
-	ff8_2 flipflop8 port map(clk, d(23 downto 16), q(23 downto 16));
-	ff8_1 flipflop8 port map(clk, d(15 downto 8), q(15 downto 8));
-	ff8_0 flipflop8 port map(clk, d(7 downto 0), q(7 downto 0));
+	ff8_3: flipflop8 port map(clk, d(31 downto 24), q(31 downto 24));
+	ff8_2: flipflop8 port map(clk, d(23 downto 16), q(23 downto 16));
+	ff8_1: flipflop8 port map(clk, d(15 downto 8), q(15 downto 8));
+	ff8_0: flipflop8 port map(clk, d(7 downto 0), q(7 downto 0));
 end architecture;
+
