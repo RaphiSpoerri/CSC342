@@ -1,6 +1,6 @@
 library ieee, work;
 use ieee.std_logic_1164.all;
-use work.processor.full_adder;
+use work.machine.full_adder;
 
 entity adder8 is port (
 	lhs, rhs: in std_logic_vector(7 downto 0);

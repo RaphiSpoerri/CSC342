@@ -1,9 +1,9 @@
 
-
+-- Author: Raphael Spoerri
 
 library ieee, work;
 use ieee.std_logic_1164.all;
-use work.processor.nor_gate;
+use work.machine.nor_gate;
 
 entity flipflop1 is port (
 	clk, d: in std_logic;
