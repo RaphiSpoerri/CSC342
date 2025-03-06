@@ -13,13 +13,16 @@ entity processor is port (
 
 architecture behav of processor is
 	signal sel: std_logic_vector(5 downto 0);
-	signal r_in, r_out1, r_out0, rhs: std_logic_vector(31 downto 0);
+	signal r_in: std_logic_vector(31 downto 0) := zeros32;
+	signal r_out1: std_logic_vector(31 downto 0) := zeros32;
+	signal r_out0: std_logic_vector(31 downto 0) := zeros32;
+	signal rhs: std_logic_vector(31 downto 0) := zeros32;
+	signal num: std_logic_vector(31 downto 0) := zeros32;
 	signal inv, uint, imm, cout: std_logic;
 
 	
 	signal opcode: std_logic_vector(5 downto 0);
 	signal rs, rt, rd: std_logic_vector(4 downto 0);
-	signal num: std_logic_vector(15 downto 0);
 	signal w: std_logic;
 
 begin
@@ -32,8 +35,12 @@ begin
 		rs <= stmt(25 downto 21);
 		rt <= stmt(20 downto 16);
 		rd <= stmt(15 downto 11);
-		num <= stmt(15 downto 0);
-		if opcode(4) /= '0' or opcode(3) /= '0' then
+		num(15 downto 0) <= stmt(15 downto 0);
+	end process;
+
+	process(opcode) is begin
+		--report to_string(stmt) & ":" & to_string(opcode);
+		if clk = '1' and (opcode(4) /= '0' or opcode(3) /= '0') then
 			report "Unsupported instruction " & to_string(opcode) severity error;
 		end if;
 
@@ -48,7 +55,10 @@ begin
 			rhs(i) <= (r_out0(i) and not imm) or (num(i) and imm);
 		end loop;
 		w <= '1';
+	end process;
 
-
+	process(inv, uint, imm, rhs, w) is begin
+		report std_logic'image(inv) & ":" & to_string(r_in);
+		res <= r_in;
 	end process;
 end architecture;

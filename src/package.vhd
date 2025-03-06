@@ -2,7 +2,17 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 package machine is
-	
+	constant ADD: std_logic_vector(5 downto 0) := "100000";
+	constant ADDU: std_logic_vector(5 downto 0) := "100001";
+	constant SUB: std_logic_vector(5 downto 0) := "100010";
+	constant SUBU: std_logic_vector(5 downto 0) := "100011";
+	constant r3: std_logic_vector(4 downto 0) := "00011";
+	constant r2: std_logic_vector(4 downto 0) := "00010";
+	constant r1: std_logic_vector(4 downto 0) := "00001";
+	constant r0: std_logic_vector(4 downto 0) := "00000";
+	constant unused: std_logic_vector(10 downto 0) := "00000000000";
+	constant zeros32: std_logic_vector(31 downto 0) := 
+		"00000000" & "00000000" & "00000000" & "00000000";
 	component half_adder is port (
 		lhs, rhs: in std_logic;
 		cout, sum: out std_logic
@@ -58,6 +68,13 @@ package machine is
 		d: in std_logic_vector(31 downto 0);
 		q1: out std_logic_vector(31 downto 0);
 		q0: out std_logic_vector(31 downto 0)
+	); end component;
+
+	component processor is port (
+		clk: in std_logic;
+		stmt: in std_logic_vector(31 downto 0);
+		res: out std_logic_vector(31 downto 0);
+		overflow: out std_logic
 	); end component;
 
 
