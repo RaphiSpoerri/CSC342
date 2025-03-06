@@ -10,7 +10,7 @@ entity mux_4x1 is port (
 
 architecture struct of mux_4x1 is begin
 	process(addr, buses) is begin
-		for i := 0 to 31 generate
+		for i in 0 to 31 generate
 			q(i) <= (addr(0) and addr(1) and bus3(i))
 				or (not addr(0) and addr(1) and bus2(i))
 				or (addr(0) and not addr(1) and bus1(i))
