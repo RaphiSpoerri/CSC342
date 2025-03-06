@@ -23,7 +23,7 @@ package processor is
 
 	component alu32 is port (
 		lhs, rhs: in std_logic_vector(31 downto 0);
-		inv, cin: in std_logic;
+		cin: in std_logic;
 		cout: out std_logic;
 		sum: out std_logic_vector(31 downto 0)
 	); end component;
