@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-package processor is
+package machine is
 	
 	component half_adder is port (
 		lhs, rhs: in std_logic;
@@ -51,6 +51,15 @@ package processor is
 		q: out std_logic_vector(31 downto 0)
 	); end component;
 
+	component register_file is port (
+		clk, w: in std_logic;
+		sel_d, sel_q1, sel_q0: in std_logic_vector(1 downto 0);
+		d: in std_logic_vector(31 downto 0);
+		q1: out std_logic_vector(31 downto 0);
+		q0: out std_logic_vector(31 downto 0)
+	); end component;
+
+
 	component mux_4x1 is port (
 		addr: in std_logic_vector(1 downto 0);
 		bus0, bus1, bus2, bus3: in std_logic_vector(31 downto 0);
@@ -63,7 +72,7 @@ package processor is
 	function to_string(n: std_logic_vector) return string;
 end package;
 
-package body processor is
+package body machine is
 	function to_string(n: std_logic_vector) return string is
 		variable b: string (1 to n'length) := (others => NUL);
 		variable stri: integer := 1; 
