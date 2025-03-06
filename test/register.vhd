@@ -2,25 +2,55 @@
 library ieee, work;
 
 use ieee.std_logic_1164.all;
-use work.processor.all;
+use work.machine.all;
 
 entity testbench is
 end testbench;
 
 architecture tab of testbench is
 	signal clk: std_logic;
-	signal s: std_logic_vector(5 downto 0);
-	signal d, q1, q0: std_logic_vector(31 downto 0);
+	signal d, q: std_logic_vector(31 downto 0);
 begin
-	reg: register_file port map(clk, s(1 downto 0), s(3 downto 2), s(5 downto 4), d, q1, q0);
+	reg: register32 port map(clk, d, q);
 
 	process is begin
-		s <= "000000";
-		d <= not ("00000000"&"00000000"&"00000000"&"00000000");
+		report to_string(q);
 		clk <= '1';
+		d <= "10000000000000000000000000000000";
 		wait for 5 ns;
-		report to_string(q1) & ":" & to_string(q0);
+		
+		report to_string(q);
+		if q /= "10000000000000000000000000000000" then
+			report "Test #1 failed" severity error;
+		end if;
+		clk <= '0';
+		d <= "01000000000000000000000000000000";
+		wait for 5 ns;
+		if q /= "10000000000000000000000000000000" then
+			report "Test #2 failed" severity error;
+		end if;
+		
+		report to_string(q);
+
+		clk <= '1';
+		d <= "00011000000000000000000000000000";
+		wait for 5 ns;
+		
+		report to_string(q);
+		if q /= "00011000000000000000000000000000" then
+			report "Test #3 failed" severity error;
+		end if;
+		clk <= '0';
+		d <= "01000000000000000000000000000000";
+		wait for 5 ns;
+		if q /= "00011000000000000000000000000000" then
+			report "Test #4 failed" severity error;
+		end if;
+		
+		report to_string(q);
+
 		wait;
 	end process;
 end architecture;
 	
+
