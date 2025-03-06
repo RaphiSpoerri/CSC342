@@ -44,6 +44,12 @@ package processor is
 		q: inout std_logic_vector(7 downto 0)
 	); end component;
 
+	component register32 is port (
+		clk: in std_logic;
+		d: in std_logic_vector(31 downto 0);
+		q: inout std_logic_vector(31 downto 0)
+	); end component;
+
 	component test_bench is
 	end component;
 

@@ -1,6 +1,5 @@
 
-library ieee;
-library work;
+library ieee, work;
 
 use ieee.std_logic_1164.all;
 use work.processor.all;
@@ -15,8 +14,23 @@ begin
 	reg: register32 port map(clk, d, q);
 
 	process is begin
-		d <= '0';
+		report to_string(q);
 		clk <= '1';
+		d <= "10000000000000000000000000000000";
+		wait for 5 ns;
+		
+		report to_string(q);
+		if q /= "10000000000000000000000000000000" then
+			report "Test #1 failed" severity error;
+		end if;
+		clk <= '0';
+		d <= "01000000000000000000000000000000";
+		wait for 5 ns;
+		if q /= "10000000000000000000000000000000" then
+			report "Test #2 failed" severity error;
+		end if;
+		
+		report to_string(q);
 		
 
 		wait;
