@@ -1,6 +1,5 @@
 
-library ieee;
-library work;
+library ieee, work;
 use ieee.std_logic_1164.all;
 use work.processor.flipflop1;
 
