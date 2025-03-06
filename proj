@@ -1,22 +1,28 @@
 #!/usr/bin/env fish
+cd (status dirname)
 switch $argv[1]
 case -r
-    set err (mktemp)
-    if ghdl -a {processor,main}.vhd adder/*.vhd 2>$err && ghdl -e testbench 2>$err
-        ./testbench
-        rm testbench *.o *.cf
-    else
-        set f (head -n1 $err | string match -r '^[^:\n]+')
-        set loc (head -n1 $err | string match -r '(?<=)\d+:\d+')
-        cat $err
-        rm $err
-        sleep 1
-        
-        micro $f +$loc
-    end
+    set unit $argv[2]
+    test "$unit" = "" && set unit adder
+    
+	set err (mktemp)
+	if ghdl -a src/{processor, */*}.vhd test/$unit.vhd 2>$err && ghdl -e testbench 2>$err
+		./testbench
+		rm testbench
+	else
+		set f (head -n1 $err | string match -r '^[^:\n*]+')
+		set loc (head -n1 $err | string match -r '(?<=)\d+:\d+')
+		cat $err
+		rm $err
+		if test -f $f
+			sleep 1
+			micro $f +$loc
+		end
+	end
+	rm *.o *.cf
 case -s
-    set msg $argv[2]
-    git add ./{,**}/*
-    and git commit -m $msg
-    and git push origin main
+	set msg $argv[2]
+	git add **/*.vhd
+	and git commit -m $msg
+	and git push origin main
 end
