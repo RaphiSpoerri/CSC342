@@ -2,7 +2,7 @@
 
 library ieee, work;
 use ieee.std_logic_1164.all;
-use work.processor.flipflop8;
+use work.processor.all;
 
 entity register32 is port (
 	clk: in std_logic;
