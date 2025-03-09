@@ -1,19 +1,17 @@
 
-
 -- Author: Raphael Spoerri --
 
 library ieee, work;
 use ieee.std_logic_1164.all, work.machine.all;
 
-entity processor is port (
-	clk, sub: in std_logic;
-
+entity assembler is port (
+	clk: in std_logic;
 	stmt: in std_logic_vector(31 downto 0);
 	res: out std_logic_vector(31 downto 0);
 	overflow: out std_logic
 ); end entity;
 
-architecture behav of processor is
+architecture behav of assembler is
 	signal sel_w: std_logic_vector(1 downto 0) := "00";
 	signal sel_r: std_logic_vector(3 downto 0) := "0000";
 	signal r_in, r_out1, r_out0, rhs: std_logic_vector(31 downto 0) := zeros32;
@@ -66,8 +64,18 @@ begin
 		report to_string(sel_w & rd & rt & (imm)) & ":" & to_string(sel_r & (clk, w)) & ":" 
 			& to_string(r_out0) & ":" & to_string(r_out1);
 		
-	
+		if clk = '1' and (opcode(4) /= '0' or opcode(3) /= '0') then
+			report "Unsupported instruction " & to_string(opcode) severity error;
+		end if;
 		
+		report  to_string(sel_w & sel_r & (clk, w)) & ":" & to_string(rhs) & ":" & to_string(r_out1);
+		
+		report to_string(rhs) & ":" & to_string(num) & ":" & to_string(r_in);
+		report to_string(sel_r);
+		report to_string(r_out1) & ":" & to_string(r_out0);
+	
+		res <= r_in;
+		r_in <= sum;
 		wait;
 	end process;
 end architecture;
