@@ -2,12 +2,13 @@ library ieee, work;
 
 use ieee.std_logic_1164.all;
 use work.machine.adder8;
+use work.machine.zeros32;
 
 entity alu32 is port (
 	lhs, rhs: in std_logic_vector(31 downto 0);
 	cin: in std_logic;
 	cout: out std_logic;
-	sum: out std_logic_vector(31 downto 0)
+	sum: inout std_logic_vector(31 downto 0) := zeros32
 ); end entity;
 
 architecture behav of alu32 is

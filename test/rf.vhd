@@ -7,55 +7,55 @@ use work.machine.all;
 entity testbench is
 end testbench;
 
-architecture tab of testbench is
+architecture tb of testbench is
 	signal clk: std_logic;
-	signal d: std_logic_vector(31 downto 0);
-	signal q: std_logic_vector(31 downto 0);
+	signal d, q1, q0: std_logic_vector(31 downto 0);
 begin
-	reg: register32 port map(clk, d, q);
+	reg: register_file port map(clk, "00", "0000", d, q1, q0);
 
 	process is begin
+		report to_string(q1);
 		clk <= '1';
 		d <= zeros32;
 		wait for 5 ns;
-		d <= "10000000000000000000000000000000";
 		clk <= '0';
 		wait for 100 ns;
-		report to_string(q);
-		clk <= '1';
-		d <= "10000000000000000000000000000000";
+		report to_string(q1);
 		wait for 5 ns;
 		
-		report to_string(q);
-		if q /= "10000000000000000000000000000000" then
+		clk <= '1';
+		d <= "10000000000000000000000000000000";
+		wait for 10 ns;
+		
+		report to_string(q1);
+		if q1 /= "10000000000000000000000000000000" then
 			report "Test #1 failed" severity error;
 		end if;
 		clk <= '0';
 		d <= "01000000000000000000000000000000";
 		wait for 5 ns;
-		if q /= "10000000000000000000000000000000" then
+		if q1 /= "10000000000000000000000000000000" then
 			report "Test #2 failed" severity error;
 		end if;
 		
-		report to_string(q);
+		report to_string(q1);
 
 		clk <= '1';
 		d <= "00011000000000000000000000000000";
 		wait for 5 ns;
 		
-		report to_string(q);
-		if q /= "00011000000000000000000000000000" then
+		report to_string(q1);
+		if q1 /= "00011000000000000000000000000000" then
 			report "Test #3 failed" severity error;
 		end if;
 		clk <= '0';
 		d <= "01000000000000000000000000000000";
 		wait for 5 ns;
-		if q /= "00011000000000000000000000000000" then
+		if q1 /= "00011000000000000000000000000000" then
 			report "Test #4 failed" severity error;
 		end if;
 		
-		report to_string(q);
-
+		report to_string(q1);
 		wait;
 	end process;
 end architecture;

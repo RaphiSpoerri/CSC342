@@ -36,7 +36,7 @@ package machine is
 		lhs, rhs: in std_logic_vector(31 downto 0);
 		cin: in std_logic;
 		cout: out std_logic;
-		sum: out std_logic_vector(31 downto 0)
+		sum: inout std_logic_vector(31 downto 0)
 	); end component;
 
 	component nor_gate is port (
@@ -62,7 +62,7 @@ package machine is
 	); end component;
 
 	component register_file is port (
-		clk, w: in std_logic;
+		w: in std_logic;
 		sel: in std_logic_vector(1 downto 0);
 		sel_q: in std_logic_vector(3 downto 0);
 		d: in std_logic_vector(31 downto 0);

@@ -3,11 +3,10 @@
 
 library ieee, work;
 use ieee.std_logic_1164.all;
-use work.machine.register32;
-use work.machine.mux_4x1;
+use work.machine.all;
 
 entity register_file is port (
-	clk, w: in std_logic;
+	w: in std_logic := '0';
 	sel: in std_logic_vector(1 downto 0);
 	sel_q: in std_logic_vector(3 downto 0);
 	d: in std_logic_vector(31 downto 0);
@@ -26,12 +25,12 @@ begin
 	r2: register32 port map(clk => w2, d => d, q => bus2);
 	r1: register32 port map(clk => w1, d => d, q => bus1);
 	r0: register32 port map(clk => w0, d => d, q => bus0);
-
-	process(clk, w, sel) is begin
-		w3 <= clk and w and sel(1) and sel(0);
-		w2 <= clk and w and sel(1) and not sel(0);
-		w1 <= clk and w and not sel(1) and sel(0); 
-		w0 <= clk and w and not sel(1) and not sel(0);
+	
+	process(w) is begin
+		w3 <= w and sel(1) and sel(0);
+		w2 <= w and sel(1) and not sel(0);
+		w1 <= w and not sel(1) and sel(0); 
+		w0 <= w and not sel(1) and not sel(0);
 	end process;
 end architecture;
 
