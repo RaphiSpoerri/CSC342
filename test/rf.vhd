@@ -11,7 +11,7 @@ architecture tb of testbench is
 	signal clk: std_logic;
 	signal d, q1, q0: std_logic_vector(31 downto 0);
 begin
-	reg: register_file port map(clk, "00", "0000", d, q1, q0);
+	reg: register_file port map(clk, "00", d, "00", q1, "00", q0);
 
 	process is begin
 		report to_string(q1);

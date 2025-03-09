@@ -8,18 +8,20 @@ entity testbench is
 end testbench;
 
 architecture tb of testbench is
-	signal clk, overflow, init: std_logic := '0';
-	signal stmt, res: std_logic_vector(31 downto 0);
+	signal run, done: std_logic := '0';
+	signal init: std_logic := '0';
+	signal stmt: std_logic_vector(31 downto 0);
 begin
-	cpu: processor port map(clk, stmt, res, overflow);
+	cpu: assembler port map(init, run, stmt, done);
 	
 	process is begin
-		stmt <= ADDU & r2 & r1 & r1 & unused;
-		wait for 100 ns;
-		--report to_string(stmt);
-		clk <= '1';
-		wait for 200 ns;
-		report to_string(res);
+		init <= '1';
+		wait for 20 ns;
+		stmt <= addiu & r1 & r1 & zeros32(7 downto 0) & "00001111";
+		run <= '1';
+		wait until done = '1';
+	
+		--report to_string(res);
 		wait;
 	end process;
 end architecture;

@@ -4,7 +4,7 @@ switch $argv[1]
 case -r
     set err (mktemp)
     set files src/{package,*/*}.vhd
-    string join \n $files
+    #string join \n $files
     if ghdl -a $files test/$argv[2].vhd 2>$err && ghdl -e testbench 2>$err
         ./testbench
     else
