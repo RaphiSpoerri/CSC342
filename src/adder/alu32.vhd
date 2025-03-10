@@ -1,8 +1,10 @@
+
+-- Author: Raphael Spoerri --
+
 library ieee, work;
 
 use ieee.std_logic_1164.all;
-use work.spoerri_raphael.adder8;
-use work.spoerri_raphael.zeros32;
+use work.spoerri_raphael.all;
 
 entity alu32 is port (
 	lhs, rhs: in std_logic_vector(31 downto 0);
