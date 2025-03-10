@@ -44,24 +44,20 @@ package spoerri_raphael is
 		sum: inout std_logic_vector(31 downto 0)
 	); end component;
 
-	component nor_gate is port (
-		a, b: in std_logic;
-		q: out std_logic
+	component latch1 is port(
+		w, d: in std_logic;
+		q: out std_logic;
+		p: inout std_logic
 	); end component;
 
-	component flipflop1 is port (
-		clk, d: in std_logic;
-		q: out std_logic := '0'
-	); end component;
-
-	component flipflop8 is port (
-		clk: in std_logic;
+	component latch8 is port (
+		w: in std_logic;
 		d: in std_logic_vector(7 downto 0);
 		q: out std_logic_vector(7 downto 0)
 	); end component;
 
 	component register32 is port (
-		clk: in std_logic;
+		w: in std_logic;
 		d: in std_logic_vector(31 downto 0);
 		q: out std_logic_vector(31 downto 0)
 	); end component;
