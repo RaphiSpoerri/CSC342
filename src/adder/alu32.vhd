@@ -1,8 +1,8 @@
 library ieee, work;
 
 use ieee.std_logic_1164.all;
-use work.machine.adder8;
-use work.machine.zeros32;
+use work.spoerri_raphael.adder8;
+use work.spoerri_raphael.zeros32;
 
 entity alu32 is port (
 	lhs, rhs: in std_logic_vector(31 downto 0);

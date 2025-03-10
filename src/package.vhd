@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-package machine is
+package spoerri_raphael is
 	constant ADD: std_logic_vector(5 downto 0)  := "100000";
 	constant ADDU: std_logic_vector(5 downto 0) := "100001";
 	constant ADDI: std_logic_vector(5 downto 0) := "001000";
@@ -101,7 +101,7 @@ package machine is
 	function to_string(n: std_logic_vector) return string;
 end package;
 
-package body machine is
+package body spoerri_raphael is
 	function to_string(n: std_logic_vector) return string is
 		variable b: string (1 to n'length) := (others => NUL);
 		variable stri: integer := 1; 

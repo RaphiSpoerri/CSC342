@@ -1,7 +1,7 @@
 
 library ieee, work;
 use ieee.std_logic_1164.all;
-use work.machine.flipflop1;
+use work.spoerri_raphael.flipflop1;
 
 entity flipflop8 is port (
 	clk: in std_logic;

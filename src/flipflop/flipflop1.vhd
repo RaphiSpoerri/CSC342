@@ -3,7 +3,7 @@
 
 library ieee, work;
 use ieee.std_logic_1164.all;
-use work.machine.nor_gate;
+use work.spoerri_raphael.nor_gate;
 
 entity flipflop1 is port (
 	clk, d: in std_logic;

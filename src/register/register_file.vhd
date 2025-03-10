@@ -3,7 +3,7 @@
 
 library ieee, work;
 use ieee.std_logic_1164.all;
-use work.machine.all;
+use work.spoerri_raphael.all;
 
 entity register_file is port (
 	w: in std_logic;

@@ -1,6 +1,6 @@
 library ieee, work;
 use ieee.std_logic_1164.all;
-use work.machine.half_adder;
+use work.spoerri_raphael.half_adder;
 
 entity full_adder is port (
 	lhs, rhs, cin: in std_logic;

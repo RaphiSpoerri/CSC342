@@ -2,8 +2,7 @@
 
 library ieee, work;
 use ieee.std_logic_1164.all;
-use work.machine.all;
-
+use work.spoerri_raphael.all;
 entity register32 is port (
 	clk: in std_logic;
 	d: in std_logic_vector(31 downto 0);
