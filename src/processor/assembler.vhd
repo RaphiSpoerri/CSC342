@@ -2,7 +2,7 @@
 -- Author: Raphael Spoerri --
 
 library ieee, work;
-use ieee.std_logic_1164.all, work.machine.all;
+use ieee.std_logic_1164.all, work.spoerri_raphael.all;
 
 entity assembler is port (
 	exec: in std_logic;

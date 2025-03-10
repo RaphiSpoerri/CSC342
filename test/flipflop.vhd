@@ -1,9 +1,9 @@
 
-library ieee;
-library work;
+-- Author: Raphael Spoerri --
+library ieee, work;
 
 use ieee.std_logic_1164.all;
-use work.machine.all;
+use work.spoerri_raphael.all;
 
 entity testbench is
 end testbench;

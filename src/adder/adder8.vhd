@@ -1,6 +1,9 @@
+
+-- Author: Raphael Spoerri --
+
 library ieee, work;
 use ieee.std_logic_1164.all;
-use work.machine.full_adder;
+use work.spoerri_raphael.full_adder;
 
 entity adder8 is port (
 	lhs, rhs: in std_logic_vector(7 downto 0);

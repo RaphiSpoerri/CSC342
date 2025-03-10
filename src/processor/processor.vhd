@@ -3,7 +3,7 @@
 -- Author: Raphael Spoerri --
 
 library ieee, work;
-use ieee.std_logic_1164.all, work.machine.all;
+use ieee.std_logic_1164.all, work.spoerri_raphael.all;
 
 entity processor is port (
 	clk, sub, signed, imm: in std_logic;
