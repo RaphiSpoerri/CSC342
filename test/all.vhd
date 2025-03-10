@@ -37,7 +37,7 @@ begin
 
 			stmt <= program(i);
 			exec <= '1';
-			wait for 30 ns;
+			wait for 15 ns;
 
 			report to_string(flags);
 			exec <= '0';
