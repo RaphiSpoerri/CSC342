@@ -82,9 +82,10 @@ package machine is
 	); end component;
 
 	component assembler is port (
-		init, exec: in std_logic;
+		exec: in std_logic;
 		stmt: in std_logic_vector(31 downto 0);
-		done: out std_logic
+		flags: out std_logic_vector(2 downto 0);
+		regs: out std_logic_vector(35 downto 0)
 	); end component;
 
 
