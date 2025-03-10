@@ -22,10 +22,10 @@ begin
 	mux1: mux_4x1 port map(sel_q1, bus0, bus1, bus2, bus3, q1);
 	mux0: mux_4x1 port map(sel_q0, bus0, bus1, bus2, bus3, q0);
 
-	r3: register32 port map(clk => w3, d => d, q => bus3);
-	r2: register32 port map(clk => w2, d => d, q => bus2);
-	r1: register32 port map(clk => w1, d => d, q => bus1);
-	r0: register32 port map(clk => w0, d => d, q => bus0);
+	r3: register32 port map(w3, d => d, q => bus3);
+	r2: register32 port map(w2, d => d, q => bus2);
+	r1: register32 port map(w1, d => d, q => bus1);
+	r0: register32 port map(w0, d => d, q => bus0);
 	
 	process(w) is begin
 		w3 <= w and sel(1) and sel(0);

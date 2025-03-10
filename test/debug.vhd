@@ -26,7 +26,6 @@ begin
 		wait for 15 ns;
 		clk <= '0';
 		wait for 5 ns;
-		
 		report to_string(res);
 		imm <= '0';
 		reg2(0) <= '0';
