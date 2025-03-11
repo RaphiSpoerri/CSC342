@@ -19,6 +19,8 @@ case -r
     end
     
     rm -f ./{**/,}{testbench,*.{o,cf}}
+case -a
+    cat src/{package,*/*}.vhd
 case -s
     set msg $argv[2]
     git add ./{,**}/*
