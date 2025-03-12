@@ -35,6 +35,7 @@ begin
 		wait for 15 ns;
 		clk <= '0';
 		
+		
 		--report to_string(stmt);
 		report to_string(res);
 		wait;
