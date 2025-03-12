@@ -19,7 +19,7 @@ begin
 	process is begin
 		--stmt <= ADDU & r2 & r1 & r1 & unused;
 		imm <= '1';
-		reg2 <= zeros32(23 downto 0) & "00001111";
+		reg2 <= zeros32(23 downto 0) & "00001010";
 		reg1 <= "00";
 		dest <= "00";
 		clk <= '1';

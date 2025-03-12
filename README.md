@@ -1,6 +1,6 @@
 
 # Add/Sub Processor
-
+*Raphael Spoerri*  
 Unfortunately, I was not able to make it work in the end. It has a bug that causes registers to hold undefined values, and I don't have enough time to fix it.
 I have a working example in `test/debug.vhd`, which doubles a number.
 
