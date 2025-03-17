@@ -5,7 +5,7 @@ library ieee, work;
 use ieee.std_logic_1164.all, work.spoerri_raphael.all;
 
 entity assembler is port (
-	exec: in std_logic;
+	clk: in std_logic;
 	stmt: in std_logic_vector(31 downto 0);
 	flags: out std_logic_vector(2 downto 0);
 	regs: out std_logic_vector(35 downto 0)
@@ -17,11 +17,11 @@ architecture behav of assembler is
 	signal imm: std_logic;
 begin
 	process is begin
-		wait until rising_edge(exec);
+		wait until rising_edge(clk);
 
 		opcode <= stmt(31 downto 26);
 		wait for 10 ns;
-		--report to_string(opcode);
+		
 		imm <= stmt(26 + 3);
 		flags(0) <= opcode(1);
 		flags(1) <= not opcode(0);

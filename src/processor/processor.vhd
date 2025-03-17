@@ -37,7 +37,5 @@ begin
 		w <= '1';
 		wait for 5 ns;
 		w <= '0';
-
-		
 	end process;
 end architecture;
