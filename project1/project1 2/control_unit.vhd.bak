@@ -1,0 +1,44 @@
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+
+entity control_unit is
+	port(
+		instruction: in std_logic_vector( 31 downto 0);
+		Rw: out std_logic_vector( 4 downto 0);
+		Ra: out std_logic_vector( 4 downto 0);
+		Rb: out std_logic_vector( 4 downto 0);
+		ALUCtr: out std_logic;
+		RegW: out std_logic
+	);
+end control_unit;
+
+
+architecture control_unit_arch of control_unit is
+
+begin
+	
+	ALUCtr <= instruction(1);
+	
+	RegW <= instruction(5);
+	 
+	Rw(0) <= instruction(11);
+	Rw(1) <= instruction(12);
+	Rw(2) <= instruction(13);
+	Rw(3) <= instruction(14);
+	Rw(4) <= instruction(15);
+	
+	Rb(0) <= instruction(16);
+	Rb(1) <= instruction(17);
+	Rb(2) <= instruction(18);
+	Rb(3) <= instruction(19);
+	Rb(4) <= instruction(20);
+	
+	Ra(0) <= instruction(21);
+	Ra(1) <= instruction(22);
+	Ra(2) <= instruction(23);
+	Ra(3) <= instruction(24);
+	Ra(4) <= instruction(25);
+	
+
+
+end control_unit_arch;

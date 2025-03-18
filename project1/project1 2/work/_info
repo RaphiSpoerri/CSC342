@@ -1,0 +1,640 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/lushi/Desktop/VHDL/project1
+Econtrol_unit
+Z0 w1741654171
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/lushi/Desktop/project1
+Z4 8C:/Users/lushi/Desktop/project1/control_unit.vhd
+Z5 FC:/Users/lushi/Desktop/project1/control_unit.vhd
+l0
+L4
+VGLMDSk^;bg^d@[OcAA?:^2
+!s100 5<P;4NACG0D^zm9:O:2;O3
+Z6 OV;C;10.5b;63
+33
+Z7 !s110 1741655571
+!i10b 1
+Z8 !s108 1741655571.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/control_unit.vhd|
+Z10 !s107 C:/Users/lushi/Desktop/project1/control_unit.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 NoCoverage 1 CvgOpt 0
+Acontrol_unit_arch
+R1
+R2
+DEx4 work 12 control_unit 0 22 GLMDSk^;bg^d@[OcAA?:^2
+l18
+L16
+V94hNZCVWajKC;R7PXQLB93
+!s100 bVeDZzSEYm<YDDPPF[B?d2
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ed_flipflop
+Z13 w1740714506
+R1
+R2
+R3
+Z14 8C:/Users/lushi/Desktop/project1/D_FlipFlop.vhd
+Z15 FC:/Users/lushi/Desktop/project1/D_FlipFlop.vhd
+l0
+L4
+VoIA;`[>[S`B4OCX_1V5oG2
+!s100 BXV>HLVgN`0N7baYIQ>mA3
+R6
+33
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/D_FlipFlop.vhd|
+Z17 !s107 C:/Users/lushi/Desktop/project1/D_FlipFlop.vhd|
+!i113 1
+R11
+R12
+Ad_flipflop_arch
+R1
+R2
+DEx4 work 10 d_flipflop 0 22 oIA;`[>[S`B4OCX_1V5oG2
+l19
+L11
+VVhM2fOObJe<R;FL8X@1VF1
+!s100 8Ccez7Kb68IjJKdaSQjUa1
+R6
+33
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Ed_flipflop_re
+R13
+R1
+R2
+R3
+Z18 8C:/Users/lushi/Desktop/project1/D_FlipFlop_Rising_edge.vhd
+Z19 FC:/Users/lushi/Desktop/project1/D_FlipFlop_Rising_edge.vhd
+l0
+L4
+V6EVK;zZlz_N@QCI?alK]40
+!s100 JoDDhi[9gISVPHY7i76gl2
+R6
+33
+R7
+!i10b 1
+R8
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/D_FlipFlop_Rising_edge.vhd|
+Z21 !s107 C:/Users/lushi/Desktop/project1/D_FlipFlop_Rising_edge.vhd|
+!i113 1
+R11
+R12
+Ad_flipflop_arch
+R1
+R2
+DEx4 work 13 d_flipflop_re 0 22 6EVK;zZlz_N@QCI?alK]40
+l19
+L11
+VM[:j0B6SQdn^ZZ:bdX0;D1
+!s100 >5[_Hc;@9`c]g9R;>@^o:2
+R6
+33
+R7
+!i10b 1
+R8
+R20
+R21
+!i113 1
+R11
+R12
+Ed_latch
+R13
+R1
+R2
+R3
+Z22 8C:/Users/lushi/Desktop/project1/D_Latch.vhd
+Z23 FC:/Users/lushi/Desktop/project1/D_Latch.vhd
+l0
+L4
+V0N]lWmQA;GI^mKS7mRTh61
+!s100 0M7?JSO^T`he_5<S:Cf@L0
+R6
+33
+R7
+!i10b 1
+R8
+Z24 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/D_Latch.vhd|
+Z25 !s107 C:/Users/lushi/Desktop/project1/D_Latch.vhd|
+!i113 1
+R11
+R12
+Ad_latch_arch
+R1
+R2
+DEx4 work 7 d_latch 0 22 0N]lWmQA;GI^mKS7mRTh61
+l20
+L11
+VCjh8G9NajECK5XG]N:n>:3
+!s100 8cgcG]VN4n]>U^_@8ZV<C3
+R6
+33
+R7
+!i10b 1
+R8
+R24
+R25
+!i113 1
+R11
+R12
+Edecoder
+Z26 w1741569586
+Z27 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z28 8C:/Users/lushi/Desktop/project1/decoder.vhd
+Z29 FC:/Users/lushi/Desktop/project1/decoder.vhd
+l0
+L5
+V[7CgBDUYMS;TX:lz8Fn6G1
+!s100 YVYFLE>Z;@XhmGk6Dh<XN3
+R6
+33
+R7
+!i10b 1
+R8
+Z30 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/decoder.vhd|
+Z31 !s107 C:/Users/lushi/Desktop/project1/decoder.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R27
+R1
+R2
+DEx4 work 7 decoder 0 22 [7CgBDUYMS;TX:lz8Fn6G1
+l17
+L16
+Vl:`AMM91=Ycmdbgj7K_lQ0
+!s100 <XY^dgDCE8VGG0AcNROK22
+R6
+33
+R7
+!i10b 1
+R8
+R30
+R31
+!i113 1
+R11
+R12
+Efull_adder
+Z32 w1740152471
+R1
+R2
+R3
+Z33 8C:/Users/lushi/Desktop/project1/full_adder.vhd
+Z34 FC:/Users/lushi/Desktop/project1/full_adder.vhd
+l0
+L4
+V:gYT>?zAa1oT:g58E]j8J1
+!s100 Sa^nRH[mIfIkK;gfLz;<S1
+R6
+33
+R7
+!i10b 1
+R8
+Z35 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/full_adder.vhd|
+Z36 !s107 C:/Users/lushi/Desktop/project1/full_adder.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 10 full_adder 0 22 :gYT>?zAa1oT:g58E]j8J1
+l13
+L12
+Vmf^NCON;fQS_5gK[H?Fh30
+!s100 ACTGgR_H^HQ0RD>1H2]?Z3
+R6
+33
+R7
+!i10b 1
+R8
+R35
+R36
+!i113 1
+R11
+R12
+Efull_circuit
+Z37 w1741130136
+R1
+R2
+R3
+Z38 8C:/Users/lushi/Desktop/project1/full_circuit.vhd
+Z39 FC:/Users/lushi/Desktop/project1/full_circuit.vhd
+l0
+L5
+VWk96NZ4N[K>eY:J>ESG?`1
+!s100 =kaV0_VQmDSJEQ09BZFF>2
+R6
+33
+R7
+!i10b 1
+R8
+Z40 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/full_circuit.vhd|
+Z41 !s107 C:/Users/lushi/Desktop/project1/full_circuit.vhd|
+!i113 1
+R11
+R12
+Afull_circuit_arch
+R1
+R2
+DEx4 work 12 full_circuit 0 22 Wk96NZ4N[K>eY:J>ESG?`1
+l52
+L20
+VF=nDLdlSF^>JH1j>BGPkg1
+!s100 E<kkS3z:NZS_N_VIc>keY2
+R6
+33
+R7
+!i10b 1
+R8
+R40
+R41
+!i113 1
+R11
+R12
+Emux2to1_tb
+Z42 w1741548055
+Z43 DPx4 work 13 my_components 0 22 ViWSX2TiV`^z?MeH1Q6`11
+R27
+Z44 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R1
+R2
+R3
+Z45 8C:/Users/lushi/Desktop/project1/mux2to1_tb.vhd
+Z46 FC:/Users/lushi/Desktop/project1/mux2to1_tb.vhd
+l0
+L9
+VC_BcV:XBY;E@BHnPlXkR90
+!s100 ]4dAzkIOUTUhJh70e<:@P2
+R6
+33
+R7
+!i10b 1
+R8
+Z47 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/mux2to1_tb.vhd|
+Z48 !s107 C:/Users/lushi/Desktop/project1/mux2to1_tb.vhd|
+!i113 1
+R11
+R12
+Amux2to1_tb_arch
+R43
+R27
+R44
+R1
+R2
+DEx4 work 10 mux2to1_tb 0 22 C_BcV:XBY;E@BHnPlXkR90
+l30
+L12
+VPQLDOHWOD3Wo[Y]NV<GOZ3
+!s100 P[PzfV4T_iWGYa1SKIVn00
+R6
+33
+R7
+!i10b 1
+R8
+R47
+R48
+!i113 1
+R11
+R12
+Emux_2to1
+Z49 w1741547968
+R43
+R27
+R1
+R2
+R3
+Z50 8C:/Users/lushi/Desktop/project1/mux2to1.vhd
+Z51 FC:/Users/lushi/Desktop/project1/mux2to1.vhd
+l0
+L8
+VleoIDzf@><83];chLH7J93
+!s100 dzIQSS?:@YDX;zPRfW:=i2
+R6
+33
+Z52 !s110 1741655572
+!i10b 1
+Z53 !s108 1741655572.000000
+Z54 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/mux2to1.vhd|
+Z55 !s107 C:/Users/lushi/Desktop/project1/mux2to1.vhd|
+!i113 1
+R11
+R12
+Amux_2to1_arch
+R43
+R27
+R1
+R2
+DEx4 work 8 mux_2to1 0 22 leoIDzf@><83];chLH7J93
+l17
+L16
+V6XcgE33YCDI8Y2`dQaGij2
+!s100 a[KDm9ZV@0bP0OBFi>l030
+R6
+33
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R11
+R12
+Emux_32to1
+Z56 w1741552407
+R43
+R27
+R1
+R2
+R3
+Z57 8C:/Users/lushi/Desktop/project1/mux32to1.vhd
+Z58 FC:/Users/lushi/Desktop/project1/mux32to1.vhd
+l0
+L8
+V@U<6fE?:h1Ei]mL4[0[e`1
+!s100 _P65;TFzSK:_obm6SeNUk0
+R6
+33
+R52
+!i10b 1
+R53
+Z59 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/mux32to1.vhd|
+Z60 !s107 C:/Users/lushi/Desktop/project1/mux32to1.vhd|
+!i113 1
+R11
+R12
+Amux_32to1_arch
+R43
+R27
+R1
+R2
+DEx4 work 9 mux_32to1 0 22 @U<6fE?:h1Ei]mL4[0[e`1
+l17
+L16
+VN1U<zIG6D;^E[CKNTi1U_1
+!s100 ^Ui?V4fh;1h4al2OQ]LoG0
+R6
+33
+R52
+!i10b 1
+R53
+R59
+R60
+!i113 1
+R11
+R12
+Pmy_components
+R1
+R2
+w1741569533
+R3
+8C:/Users/lushi/Desktop/project1/package_file.vhd
+FC:/Users/lushi/Desktop/project1/package_file.vhd
+l0
+L3
+VViWSX2TiV`^z?MeH1Q6`11
+!s100 ?N9KdRd:Y6>[o9W>iF?6_0
+R6
+33
+R52
+!i10b 1
+R53
+!s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/package_file.vhd|
+!s107 C:/Users/lushi/Desktop/project1/package_file.vhd|
+!i113 1
+R11
+R12
+En_register
+Z61 w1740715237
+R1
+R2
+R3
+Z62 8C:/Users/lushi/Desktop/project1/n_register.vhd
+Z63 FC:/Users/lushi/Desktop/project1/n_register.vhd
+l0
+L4
+V`L27=hNfoMJjbWbcbNInK0
+!s100 HdP:3F=5:=9H<H>H`PehL1
+R6
+33
+R52
+!i10b 1
+R53
+Z64 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/n_register.vhd|
+Z65 !s107 C:/Users/lushi/Desktop/project1/n_register.vhd|
+!i113 1
+R11
+R12
+An_register_arch
+R1
+R2
+DEx4 work 10 n_register 0 22 `L27=hNfoMJjbWbcbNInK0
+l23
+L14
+VomaG<P;0L8N6B_`Y^h7R_3
+!s100 <Tf0<Oda29LXYJ^2P88<93
+R6
+33
+R52
+!i10b 1
+R53
+R64
+R65
+!i113 1
+R11
+R12
+Enbit_add_sub
+Z66 w1741569497
+R1
+R2
+R3
+Z67 8C:/Users/lushi/Desktop/project1/nbit_add_sub.vhd
+Z68 FC:/Users/lushi/Desktop/project1/nbit_add_sub.vhd
+l0
+L4
+V[TJz7@:ZJWPlLgmH70m3=1
+!s100 NWOP4mTfe^lM4D<jeUETC1
+R6
+33
+R52
+!i10b 1
+R53
+Z69 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/nbit_add_sub.vhd|
+Z70 !s107 C:/Users/lushi/Desktop/project1/nbit_add_sub.vhd|
+!i113 1
+R11
+R12
+Anbit_add_sub_arch
+R1
+R2
+DEx4 work 12 nbit_add_sub 0 22 [TJz7@:ZJWPlLgmH70m3=1
+l31
+L18
+VIRdIh3aP@7FTEbPkH2i5`0
+!s100 Wz?5_c;T?_AjFO@Qi8dED3
+R6
+33
+R52
+!i10b 1
+R53
+R69
+R70
+!i113 1
+R11
+R12
+Eregister_file
+Z71 w1741564838
+R43
+R1
+R2
+R3
+Z72 8C:/Users/lushi/Desktop/project1/register_file.vhd
+Z73 FC:/Users/lushi/Desktop/project1/register_file.vhd
+l0
+L10
+VH;O`GIg8;_n<2fg:F9<UJ2
+!s100 Oim:cJTWa4K@KMP44?PBX2
+R6
+33
+R52
+!i10b 1
+R53
+Z74 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/register_file.vhd|
+Z75 !s107 C:/Users/lushi/Desktop/project1/register_file.vhd|
+!i113 1
+R11
+R12
+Aregister_file_arch
+R43
+R1
+R2
+DEx4 work 13 register_file 0 22 H;O`GIg8;_n<2fg:F9<UJ2
+l58
+L24
+VEShmn_M<aJ9`gdK@?=;zT2
+!s100 J>BX0]k0Qlb1gFRA?j7C<1
+R6
+33
+R52
+!i10b 1
+R53
+R74
+R75
+!i113 1
+R11
+R12
+Eregisters_add_sub_tb
+Z76 w1741655430
+R43
+R27
+R44
+R1
+R2
+R3
+Z77 8C:/Users/lushi/Desktop/project1/registers_add_sub_tb.vhd
+Z78 FC:/Users/lushi/Desktop/project1/registers_add_sub_tb.vhd
+l0
+L9
+Vc]LfC4XN3V8nkL:Z>A1]X1
+!s100 n9R1X4`ccede@SXiMEm;Y2
+R6
+33
+R52
+!i10b 1
+R53
+Z79 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/registers_add_sub_tb.vhd|
+Z80 !s107 C:/Users/lushi/Desktop/project1/registers_add_sub_tb.vhd|
+!i113 1
+R11
+R12
+Aregisters_add_sub_tb_arch
+R43
+R27
+R44
+R1
+R2
+DEx4 work 20 registers_add_sub_tb 0 22 c]LfC4XN3V8nkL:Z>A1]X1
+l72
+L12
+V78KUG[IPi4?VLP]WK_F9c1
+!s100 ;;ezjoG^n8V@XRTJGXLFG0
+R6
+33
+R52
+!i10b 1
+R53
+R79
+R80
+!i113 1
+R11
+R12
+Esr_latch
+R13
+R1
+R2
+R3
+Z81 8C:/Users/lushi/Desktop/project1/SR_Latch.vhd
+Z82 FC:/Users/lushi/Desktop/project1/SR_Latch.vhd
+l0
+L4
+VD::;D@URo6?[E`lUf[Aal1
+!s100 Pe0YX6P9;_D8`i5AXPL2Q2
+R6
+33
+R52
+!i10b 1
+R53
+Z83 !s90 -reportprogress|300|-work|work|C:/Users/lushi/Desktop/project1/SR_Latch.vhd|
+Z84 !s107 C:/Users/lushi/Desktop/project1/SR_Latch.vhd|
+!i113 1
+R11
+R12
+Asr_latch_arch
+R1
+R2
+Z85 DEx4 work 8 sr_latch 0 22 D::;D@URo6?[E`lUf[Aal1
+l13
+L11
+Z86 VFQOoHdHnJ@V:Db]G^Kg@H2
+Z87 !s100 LaWb?a6hi@iLfHQ==7e332
+R6
+33
+R52
+!i10b 1
+R53
+R83
+R84
+!i113 1
+R11
+R12
