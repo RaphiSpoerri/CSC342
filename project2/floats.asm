@@ -2,8 +2,8 @@
 
 
 .data
-float_anon1: .float 1.1
-float_anon2: .float 2.2
+float_anon1: .float 1
+float_anon2: .float 2
 
 .text
 main:
